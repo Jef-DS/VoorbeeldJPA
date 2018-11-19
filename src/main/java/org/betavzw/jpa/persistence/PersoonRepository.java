@@ -8,6 +8,6 @@ public interface PersoonRepository {
     Persoon addPersoon(String naam);
     boolean deletePersoon(Persoon persoon) ;
     Persoon getPersoon(long id);
-    void updatePersoon(Persoon persoon);
+    void updatePersoon(Persoon persoon) throws NotFoundException;
     Collection<Persoon> getPersonen();
 }
