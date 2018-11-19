@@ -3,6 +3,7 @@ package org.betavzw.jpa;
 import org.betavzw.jpa.entities.Persoon;
 import org.betavzw.jpa.persistence.NotFoundException;
 import org.betavzw.jpa.persistence.PersoonRepository;
+import org.betavzw.jpa.persistence.derby.DerbyPersoonRepository;
 import org.betavzw.jpa.persistence.memory.MemoryPersoonRepository;
 
 import java.util.Collection;
@@ -17,7 +18,7 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        PersoonRepository repository = new MemoryPersoonRepository();
+        PersoonRepository repository = new DerbyPersoonRepository();
         for (int i = 0; i< 3;i++){
             System.out.print("Geef naam: ");
             String naam = scanner.nextLine();
@@ -49,5 +50,4 @@ public class App
             System.out.printf("%d: %s%n", p.getId(), p.getNaam());
         }
     }
-}
 }
