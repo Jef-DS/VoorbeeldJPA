@@ -11,6 +11,7 @@ public class Persoon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String naam;
+    private Strin test;
     public Persoon() {
     }
 
