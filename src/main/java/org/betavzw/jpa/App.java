@@ -19,7 +19,7 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         PersoonRepository repository = new DerbyPersoonRepository();
-        for (int i = 0; i< 4;i++){
+        for (int i = 0; i< 2;i++){
             System.out.print("Geef naam: ");
             String naam = scanner.nextLine();
             Persoon p = repository.addPersoon(naam);
