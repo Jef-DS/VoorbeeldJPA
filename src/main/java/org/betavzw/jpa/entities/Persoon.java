@@ -35,5 +35,4 @@ public class Persoon {
     public void setNaam(String naam) {
         this.naam = naam;
     }
-    private String wie;
 }
